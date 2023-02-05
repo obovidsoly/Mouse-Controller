@@ -36,10 +36,6 @@ class MyApp(QMainWindow):
         btn_stop.setFixedSize(100,50)
         btn_stop.clicked.connect(self.btn_stop_clicked)         #실행 버튼을 btn_stop_clicked 메소드에 연결
 
-        """ btn_manual=QPushButton("사용법")
-        btn_manual.setFixedSize(100,50)
-        btn_manual.clicked.connect(self.btn_manual_clicked) """     #실행 버튼을 btn_manual_clicked 메소드에 연결
-
         hlayout.addStretch(1)
         hlayout.addWidget(btn_exe)
         hlayout.addStretch(1)
@@ -76,13 +72,6 @@ class MyApp(QMainWindow):
 
     def btn_stop_clicked(self):
         self.mouse_ctr.stop()
-
-    """ def btn_manual_clicked(self):
-        manual=Manual(self)
-        screen=gui.size()
-
-        manual.move(screen[0]/2-manual.width()/2,screen[1]/2-manual.height()/2)
-        manual.show() """
 
     #카메라 접근 권한이 없을 경우 경고 메시지창 출력
     def cam_mbox(self):
